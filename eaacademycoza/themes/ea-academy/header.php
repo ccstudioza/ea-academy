@@ -24,7 +24,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation max-width flex flex-wrap align-center space-between">
+		<nav id="site-navigation" class="main-navigation max-width flex flex-wrap align-center">
 			<div class="logo">
 				<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 					<img src="/wp-content/uploads/2025/09/logo.svg">

@@ -195,13 +195,13 @@ get_header();
 <div class="graduate-capabilities">
 	<div class="max-width flex flex-wrap space-between align-center">
 		<div class="col-50">
-			<h2><?php echo get_field('landing_heading'); ?></h2>
+			<h2><?php echo get_field('graduate_capabilities_heading'); ?></h2>
 			<?php 
-			if (get_field('landing_buttons')) { ?>
+			if (get_field('graduate_capabilities_buttons')) { ?>
 	            <div class="buttons">
 	                <?php
 	                $i = 1;
-	                while (have_rows('landing_buttons')) {
+	                while (have_rows('graduate_capabilities_buttons')) {
 	                    the_row();
 	                    $class = ($i === 1) ? 'bright-blue' : 'white-o';
 	                    $button = get_sub_field('button');
@@ -237,7 +237,7 @@ get_header();
 </div>
 
 <div class="support-services">
-    <div class="max-width">
+    <div class="max-width flex flex-wrap align-center">
         <div class="wrap">
             <h2><?php echo get_field('services_heading'); ?></h2>
             <?php 
@@ -404,7 +404,7 @@ get_header();
 					    the_row(); ?>
 					    <div class="list-item flex flex-wrap space-between align-center">
 							<img src="/wp-content/uploads/2025/09/arrow.svg">
-							<?php echo get_sub_field('campus_facility'); ?>
+							<?php echo get_sub_field('facility'); ?>
 						</div>
 						<?php 
 						$i++;
