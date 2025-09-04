@@ -15,14 +15,14 @@
 get_header();
 ?>
 
-<div class="landing-banner" style="background-image: url('<?php echo get_field('landing_background_image'); ?>'); ?>">
+<div class="landing-banner" style="background-image: url('<?php echo get_field('landing_background_image'); ?>');">
 	<div class="max-width flex flex-wrap space-between">
 		<div class="landing-content col-50">
-			<h1><?php echo get_field('landing_heading'); ?></h1>
-			<?php 
-			echo get_field('landing_content');
+			<h1 class="fade-in-up"><?php echo get_field('landing_heading'); ?></h1>
+			<div class="fade-in-up delay-0.2"><?php echo get_field('landing_content'); ?></div>
+			<?php
 			if (get_field('landing_buttons')) { ?>
-                <div class="buttons">
+                <div class="buttons fade-in-up delay-0.4">
                     <?php
                     $i = 1;
                     while (have_rows('landing_buttons')) {
@@ -39,7 +39,8 @@ get_header();
                 </div>
             <?php } ?>
 		</div>
-		<div class="application-form col-50">
+		<div id="apply" class="application-form col-50 fade-in-up delay-0.6">
+			<h3>Apply Now</h3>
 			<?php echo do_shortcode('[gravityform id="1" title="false" description="true" ajax="true"]'); ?>
 		</div>
 	</div>
@@ -48,19 +49,17 @@ get_header();
 <div id="course">
 	<div class="max-width flex flex-wrap space-between">
 		<div class="course-tabs">
-			<div class="course-tab-titles flex">
+			<div class="course-tab-titles flex fade-in-up">
 				<a class="course-tab" href="#overview" data-tab-index="0">Overview</a>
 				<a class="course-tab" href="#about-course" data-tab-index="1">About The Course</a>
 				<a class="course-tab" href="#requirements" data-tab-index="2">Requirements</a>
 			</div>
-			<div class="course-tab-contents">
+			<div class="course-tab-contents fade-in-up delay-0.2">
 			    <div id="overview" class="course-tab-content" data-tab-index="0">
 			    	<div class="flex flex-wrap space-between">
 			    		<div class="col-50">
-					    	<?php 
-					    	echo get_field('course_heading');
-					    	echo get_field('course_overview_content');
-					    	?>
+			    			<h2><?php echo get_field('course_heading'); ?></h2>
+			    			<?php echo get_field('course_overview_content'); ?>
 					    </div>
 					    <div class="col-50">
 					    	<span>Course</span>
@@ -86,11 +85,11 @@ get_header();
 					    </div>
 				    </div>
 			    </div>
-			    <div id="about-course" class="course-tab-content" data-tab-index="0">
+			    <div id="about-course" class="course-tab-content" data-tab-index="1">
 			    	<div class="flex flex-wrap space-between">
 			    		<div class="col-50">
+					    	<h2><?php echo get_field('course_heading'); ?></h2>
 					    	<?php 
-					    	echo get_field('course_heading');
 					    	echo get_field('course_about_content');
 				    		if (get_field('course_buttons')) { ?>
 				                <div class="buttons">
@@ -116,11 +115,11 @@ get_header();
 					    </div>
 				    </div>
 			    </div>
-			    <div id="requirements" class="course-tab-content" data-tab-index="0">
+			    <div id="requirements" class="course-tab-content" data-tab-index="2">
 			    	<div class="flex flex-wrap space-between">
 			    		<div class="col-50">
+			    			<h2><?php echo get_field('course_heading'); ?></h2>
 					    	<?php 
-					    	echo get_field('course_heading');
 					    	echo get_field('course_requirements_content');
 				    		if (get_field('course_buttons')) { ?>
 				                <div class="buttons">
@@ -154,7 +153,7 @@ get_header();
 <div class="programme-structure">
 	<div class="max-width flex flex-wrap space-between">
 		<div class="programme-content col-50">
-			<h2><?php echo get_field('programme_structure_heading'); ?></h2>
+			<h2 class="fade-in-up"><?php echo get_field('programme_structure_heading'); ?></h2>
 			<?php
 			if (get_field('programme_structure')) { ?>
 				<div class="programme-list">
@@ -162,7 +161,7 @@ get_header();
 					$i = 1;
 					while (have_rows('programme_structure')) {
 					    the_row(); ?>
-					    <div class="list-item flex flex-wrap space-between align-center">
+					    <div class="list-item flex flex-wrap align-center fade-in-up delay-0.<?php echo $i; ?>">
 							<span>0<?php echo $i; ?></span>
 							<p><?php echo get_sub_field('item'); ?></p>
 						</div>
@@ -171,9 +170,9 @@ get_header();
 					} ?>
 				</div>
 			<?php } ?>
-			<a class="eaa-button bright-blue" href="<?php echo get_field('programme_structure_button')['url']; ?>"><?php echo get_field('programme_structure_button')['title']; ?></a>
+			<a class="eaa-button bright-blue fade-in-up delay-0.2" href="<?php echo get_field('programme_structure_button')['url']; ?>"><?php echo get_field('programme_structure_button')['title']; ?></a>
 		</div>
-		<div class="programme-accordion col-50">
+		<div class="programme-accordion col-50 fade-in-up delay-0.4">
 			<?php
 			if (get_field('programme_structure_accordion')) {
 				while (have_rows('programme_structure_accordion')) {
@@ -195,10 +194,10 @@ get_header();
 <div class="graduate-capabilities">
 	<div class="max-width flex flex-wrap space-between align-center">
 		<div class="col-50">
-			<h2><?php echo get_field('graduate_capabilities_heading'); ?></h2>
+			<h2 class="fade-in-up"><?php echo get_field('graduate_capabilities_heading'); ?></h2>
 			<?php 
 			if (get_field('graduate_capabilities_buttons')) { ?>
-	            <div class="buttons">
+	            <div class="buttons fade-in-up delay-0.2">
 	                <?php
 	                $i = 1;
 	                while (have_rows('graduate_capabilities_buttons')) {
@@ -223,7 +222,7 @@ get_header();
 					$i = 1;
 					while (have_rows('graduate_capabilities')) {
 					    the_row(); ?>
-					    <div class="list-item flex flex-wrap space-between align-center">
+					    <div class="list-item flex flex-wrap align-center fade-in-up delay-0.<?php echo $i; ?>">
 							<img src="/wp-content/uploads/2025/09/arrow.svg">
 							<?php echo get_sub_field('capability'); ?>
 						</div>
@@ -239,11 +238,11 @@ get_header();
 <div class="support-services">
     <div class="max-width flex flex-wrap align-center">
         <div class="wrap">
-            <h2><?php echo get_field('services_heading'); ?></h2>
-            <?php 
-            echo get_field('services_content');
+            <h2 class="fade-in-up"><?php echo get_field('services_heading'); ?></h2>
+            <div class="fade-in-up delay-0.2"><?php echo get_field('services_content'); ?></div>
+            <?php
             if (get_field('services_buttons')) { ?>
-                <div class="buttons">
+                <div class="buttons fade-in-up delay-0.4">
                     <?php
                     $i = 1;
                     while (have_rows('services_buttons')) {
@@ -260,7 +259,7 @@ get_header();
                 </div>
             <?php } ?>
         </div>
-        <div class="services-carousel">
+        <div class="services-carousel fade-in-right delay-0.6">
 	        <?php
 	        if (get_field('services')) {
 	            while (have_rows('services')) {
@@ -281,7 +280,7 @@ get_header();
 
 <div id="why-choose-us">
 	<div class="max-width">
-		<h2><?php echo get_field('why_choose_us_heading'); ?></h2>
+		<h2 class="fade-in-up"><?php echo get_field('why_choose_us_heading'); ?></h2>
 		<?php
 		if (get_field('why_choose_us')) { ?>
 			<div class="flex flex-wrap space-between">
@@ -289,7 +288,7 @@ get_header();
 				$i = 1;
 				while (have_rows('why_choose_us')) {
 				    the_row(); ?>
-				    <div class="item">
+				    <div class="item fade-in-up delay-0.<?php echo $i; ?>">
 						<span>0<?php echo $i; ?></span>
 						<?php echo get_sub_field('item'); ?>
 					</div>
@@ -304,10 +303,10 @@ get_header();
 <div class="banner" style="background-image: url('<?php echo get_field('banner_background_image'); ?>'); ?>">
 	<div class="max-width">
 		<div class="banner-content">
-			<?php 
-			echo get_field('banner_content');
+			<div class="fade-in-up"><?php echo get_field('banner_content'); ?></div>
+			<?php
 			if (get_field('banner_buttons')) { ?>
-                <div class="buttons">
+                <div class="buttons fade-in-up delay-0.2">
                     <?php
                     $i = 1;
                     while (have_rows('banner_buttons')) {
@@ -330,11 +329,11 @@ get_header();
 <div id="about">
 	<div class="max-width flex flex-wrap space-between">
 		<div class="about-content col-50">
-			<h2><?php echo get_field('about_heading'); ?></h2>
+			<h2 class="fade-in-up"><?php echo get_field('about_heading'); ?></h2>
+			<div class="fade-in-up delay-0.2"><?php echo get_field('about_content'); ?></div>
 			<?php
-			echo get_field('about_content');
 			if (get_field('about_buttons')) { ?>
-                <div class="buttons">
+                <div class="buttons fade-in-up delay-0.4">
                     <?php
                     $i = 1;
                     while (have_rows('about_buttons')) {
@@ -351,7 +350,7 @@ get_header();
                 </div>
             <?php } ?>
 		</div>
-		<div class="about-accordion col-50">
+		<div class="about-accordion col-50 fade-in-up delay-0.6">
 			<?php
 			if (get_field('about_accordion')) {
 				while (have_rows('about_accordion')) {
@@ -372,18 +371,18 @@ get_header();
 
 <div class="leadership">
 	<div class="max-width flex flex-wrap space-between">
-		<div class="leadership-image">
+		<div class="leadership-image col-20 fade-in-up">
 			<img src="<?php echo get_field('leadership_image'); ?>">
 			<span><?php echo get_field('leadership_name'); ?></span>
 		</div>
-		<div class="leadership-content">
-			<h2><?php echo get_field('leadership_heading'); ?></h2>
+		<div class="leadership-content col-80">
+			<h2 class="fade-in-up delay-0.2"><?php echo get_field('leadership_heading'); ?></h2>
 			<div class="flex flex-wrap space-between">
-				<div class="col-40">
+				<div class="col-40 fade-in-up delay-0.4">
 					<?php echo get_field('leadership_content_col_1'); ?>
-					<a class="eaa-button bright-blue" href="<?php echo get_field('leadship_button')['url']; ?>"><?php echo get_field('leadship_button')['title']; ?></a>
+					<a class="eaa-button bright-blue" href="<?php echo get_field('leadership_button')['url']; ?>"><?php echo get_field('leadership_button')['title']; ?></a>
 				</div>
-				<div class="col-60">
+				<div class="col-60 fade-in-up delay-0.6">
 					<?php echo get_field('leadership_content_col_2'); ?>
 				</div>
 			</div>
@@ -394,7 +393,7 @@ get_header();
 <div class="campus-facilities">
 	<div class="max-width flex flex-wrap space-between align-center">
 		<div class="col-50">
-			<h2><?php echo get_field('campus_facilities_heading'); ?></h2>
+			<h2 class="fade-in-up"><?php echo get_field('campus_facilities_heading'); ?></h2>
 			<?php
 			if (get_field('campus_facilities')) { ?>
 				<div class="facilities-list">
@@ -402,9 +401,9 @@ get_header();
 					$i = 1;
 					while (have_rows('campus_facilities')) {
 					    the_row(); ?>
-					    <div class="list-item flex flex-wrap space-between align-center">
+					    <div class="list-item flex flex-wrap align-center fade-in-up delay-0.<?php echo $i; ?>">
 							<img src="/wp-content/uploads/2025/09/arrow.svg">
-							<?php echo get_sub_field('facility'); ?>
+							<p><?php echo get_sub_field('facility'); ?></p>
 						</div>
 						<?php 
 						$i++;
@@ -412,7 +411,7 @@ get_header();
 				</div>
 			<?php }
 			if (get_field('campus_facilities_buttons')) { ?>
-	            <div class="buttons">
+	            <div class="buttons fade-in-up delay-0.4">
 	                <?php
 	                $i = 1;
 	                while (have_rows('campus_facilities_buttons')) {
@@ -429,7 +428,7 @@ get_header();
 	            </div>
 	        <?php } ?>
 	    </div>
-	    <div class="col-50">
+	    <div class="col-50 fade-in-up delay-0.4">
 	    	<?php echo get_field('campus_facilities_content'); ?>
 	    </div>
 	</div>
@@ -438,10 +437,10 @@ get_header();
 <div class="gradient-banner">
 	<div class="max-width">
 		<div class="banner-content">
-			<?php 
-			echo get_field('banner_2_content');
+			<div class="fade-in-up"><?php echo get_field('banner_2_content'); ?></div>
+			<?php
 			if (get_field('banner_2_buttons')) { ?>
-                <div class="buttons">
+                <div class="buttons fade-in-up delay-0.2">
                     <?php
                     $i = 1;
                     while (have_rows('banner_2_buttons')) {
@@ -463,16 +462,19 @@ get_header();
 
 <div id="faq">
 	<div class="max-width grid space-between">
-		<h2>FAQ</h2>
+		<h2 class="fade-in-up">FAQ</h2>
 		<?php
 		if (get_field('faq')) {
+			$i = 1;
 			while (have_rows('faq')) {
 				the_row(); ?>
-			    <div class="faq">
+			    <div class="faq fade-in-up delay-0.<?php echo $i; ?>">
 			    	<h3><?php echo get_sub_field('question'); ?></h3>
 					<p><?php echo get_sub_field('answer'); ?></p>
 				</div>
-			<?php }
+				<?php 
+				$i++;
+			}
 		} ?>
 	</div>
 </div>

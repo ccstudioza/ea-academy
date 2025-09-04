@@ -12,13 +12,13 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info max-width flex flex-wrap space-between">
+		<div class="site-info max-width flex flex-wrap space-between fade-in-up">
 			<div class="col-40">
 				<h2><?php echo get_field('footer_heading'); ?></h2>
 				<h4>Contact Us</h4>
 				<?php echo get_field('footer_contact_details'); ?>
 			</div>
-			<div class="col-30">
+			<div class="col-40">
 				<h4>Stay Up To Date</h4>
 				<?php echo do_shortcode('[gravityform id="2" title="false" description="true" ajax="true"]'); ?>
 			</div>
@@ -37,7 +37,7 @@
 						)
 					); ?>
 				</div>
-				<div class="coffee">
+				<div class="coffee flexp">
 					<a href="https://www.coffeecreativestudio.com/" target="_blank" rel="nofollow">2025 Brew by Coffee Creative</a>
 					<img src="/wp-content/uploads/2025/09/coffee.svg">
 				</div>

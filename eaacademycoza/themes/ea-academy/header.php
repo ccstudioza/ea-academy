@@ -30,7 +30,7 @@
 					<img src="/wp-content/uploads/2025/09/logo.svg">
 				</a>
 			</div>
-			<a class="eaa-button bright-blue" href="#">Apply Now</a>
+			<a class="eaa-button bright-blue" href="#apply">Apply Now</a>
 			<?php echo do_shortcode('[responsive_menu]'); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
