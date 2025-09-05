@@ -126,8 +126,12 @@ a:focus {
 	padding: 0 30px;
 }
 
-body:not(.home) #primary.max-width {
-	margin: 120px auto 70px;
+body:not(.home) #primary > .max-width {
+	margin: 160px auto 70px;
+}
+
+body:not(.home) #primary > .max-width h1 {
+	color: var(--color-dark-blue);
 }
 
 .flex {
@@ -163,7 +167,7 @@ body:not(.home) #primary.max-width {
 }
 
 .col-50 {
-	width: 48%;
+	width: 47%;
 }
 
 .col-60 {
@@ -191,6 +195,7 @@ body:not(.home) #primary.max-width {
 
 .buttons .eaa-button {
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .eaa-button {
@@ -345,6 +350,10 @@ body:not(.home) #primary.max-width {
 	align-items: center;
 }
 
+.responsive-menu-inner img {
+	width: 47%;
+}
+
 #responsive-menu-items {
 	width: 37%;
 	display: block;
@@ -425,13 +434,17 @@ ul.responsive-menu-items li.small a {
 	padding-bottom: 7%;
 }
 
+.landing-wrap .max-width {
+	position: relative;
+}
+
 .application-form {
 	background-color: var(--color-bright-blue);
 	padding: 80px 50px 100px;
 	--cut: 60px;
 	clip-path: polygon( 0 0, 100% 0, 100% calc(92% - var(--cut)), calc(98% - var(--cut)) 100%, 0 100% );
 	position: absolute;
-	right: 0;
+	right: 30px;
 	bottom: -112px;
 }
 
@@ -526,11 +539,16 @@ ul.responsive-menu-items li.small a {
 	display: none;
 }
 
+.application-form .gform_confirmation_message {
+	color: var(--color-dark-blue);
+}
+
 .support-services {
 	padding: 100px 0 70px;
 	position: relative;
-	display:flex;
+	display: flex;
 	flex-wrap: wrap;
+	overflow: hidden;
 }
 
 .support-services .max-width {
@@ -827,6 +845,9 @@ ul.responsive-menu-items li.small a {
 	letter-spacing: 5px;
 	position: relative;
 	margin-bottom: 40px;
+	max-width: 350px;
+	margin-left: auto;
+  	margin-right: auto;
 }
 
 #why-choose-us .item span::before {
@@ -968,6 +989,10 @@ ul.responsive-menu-items li.small a {
 	transition: var(--transition);
 }
 
+.course-tabs a.course-tab:last-child {
+	margin-right: 0;
+}
+
 .course-tabs a.course-tab:hover,
 .course-tabs a.course-tab.active {
 	background-color: var(--color-dark-grey);
@@ -1067,7 +1092,7 @@ ul.responsive-menu-items li.small a {
 	background-color: var(--color-white);
 	padding: 80px 45px;
 	--cut: 60px;
-	clip-path: polygon( 0 0, 100% 0, 100% calc(92% - var(--cut)), calc(102% - var(--cut)) 100%, 0 100% );
+	clip-path: polygon( 0 0, 100% 0, 100% calc(92% - var(--cut)), calc(103% - var(--cut)) 100%, 0 100% );
 }
 
 #faq h2 {
@@ -1106,6 +1131,12 @@ ul.responsive-menu-items li.small a {
 	border: none;
 	cursor: pointer;
 	transition: var(--transition);
+}
+
+.gform_wrapper.gravity-theme #field_submit input:hover, 
+.gform_wrapper.gravity-theme .gform_footer input:hover {
+	background-color: var(--color-white);
+	color: var(--color-dark-blue);
 }
 
 body .gform_wrapper.gravity-theme .gfield_required {
@@ -1163,6 +1194,10 @@ body .gfield_consent_label {
 	align-self: center;
 }
 
+.site-info .gform_confirmation_message {
+	color: var(--color-white);
+}
+
 .bottom-footer {
 	background-color: var(--color-bright-blue);
 	padding: 15px 0;
@@ -1192,7 +1227,7 @@ body .gfield_consent_label {
 	text-transform: uppercase;
 	font-size: 15px;
 	font-weight: 400;
-	color: var(--color-dark-grey);
+	color: var(--color-dark-blue);
 	text-decoration: none;
 }
 
@@ -1204,4 +1239,269 @@ body .gfield_consent_label {
 # Responsive
 --------------------------------------------------------------*/
 
+@media (max-width: 1260px) {
+	.campus-facilities {
+		margin: 0 30px;
+	}
+	#faq h2 {
+		font-size: 150px;
+	}
+	.application-form {
+		padding: 65px 50px 75px;
+		--cut: 20px;
+		clip-path: polygon( 0 0, 100% 0, 100% calc(92% - var(--cut)), calc(94% - var(--cut)) 100%, 0 100% );
+		bottom: -70px;
+	}
+}
 
+@media (max-width: 1023px) {
+	#faq .faq {
+		padding: 50px 30px;
+	}
+	.landing-content {
+		width: 100%;
+	}
+	.landing-wrap > .max-width {
+		background-color: var(--color-light-grey);
+		padding: 60px 0 0;
+		max-width: none;
+	}
+	.application-form {
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		right: auto;
+		max-width: 700px;
+		margin: 0 auto !important;
+	}
+	.application-form h3,
+	.application-form #gform_wrapper_1 {
+		max-width: 600px;
+	}
+}
+
+@media (max-width: 820px) {
+	h1 {
+		font-size: 50px;
+	}
+	.course-tab-content h2 p {
+		font-size: 28px;
+	}
+	.leadership .leadership-image {
+		width: 27%;
+	}
+	.leadership .leadership-content {
+		width: 67%;
+	}
+	.leadership h2 {
+		margin: 0 0 5px;
+	}
+	.leadership-content .flex > div {
+		width: 100%;
+		margin-bottom: -12px;
+	}
+	.leadership .eaa-button {
+		display: none;
+	}
+	.support-services .max-width .wrap {
+		max-width: 38%;
+	}
+	.support-services .max-width {
+		gap: 50px;
+	}
+	#faq .grid {
+		grid-template-columns: repeat(auto-fill, calc(50% - 15px));
+	}
+	ul.responsive-menu-items a {
+		font-size: 37px;
+	}
+	.application-form.responsive {
+		margin: 0 30px;
+		max-width: unset;
+	}
+	#course {
+		padding: 70px 0 85px;
+	}
+}
+
+@media (max-width: 767px) {
+	.col-50 {
+		width: 100%;
+	}
+	.col-50:first-child {
+		margin-bottom: 35px;
+	}
+	.course-tab-titles {
+		margin-bottom: 0;
+	}
+	.course-tab-content .col-50:first-child p {
+		max-width: unset;
+	}
+	.capabilities-list .list-item p,
+	.facilities-list .list-item p {
+		max-width: unset;
+	}
+	.graduate-capabilities {
+		--cut: 50px;
+	}
+	#why-choose-us .item {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#why-choose-us .item p {
+		max-width: 340px;
+	}
+	#course {
+		padding: 60px 0 70px;
+	}
+	.programme-structure,
+	.graduate-capabilities,
+	.leadership,
+	.campus-facilities {
+		padding: 50px 0;
+	}
+	#why-choose-us {
+		padding: 30px 0;
+	}
+	#about {
+		padding: 50px 0 60px;
+	}
+	#faq {
+		padding: 60px 0 70px;
+	}
+	.support-services {
+		padding: 50px 0 60px;
+	}
+	.support-services .max-width .wrap {
+		max-width: 100%;
+	}
+	.programme-structure h2,
+	.graduate-capabilities h2,
+	.support-services .wrap h2,
+	.support-services .wrap p {
+		max-width: unset;
+	}
+	.site-info {
+		padding-top: 70px;
+		padding-bottom: 20px;
+	}
+	.site-info .col-40 {
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto 30px;
+	}
+	.site-info .col-20 {
+		display: none;
+	}
+	.site-info h2 {
+		max-width: unset;
+	}
+	#legal-menu li:not(:last-child) {
+		margin-right: 20px;
+	}
+	#legal-menu a,
+	.coffee a {
+		font-size: 13px;
+	}
+	#responsive-menu-items {
+		width: 100%;
+		margin-top: 35px;
+	}
+	.responsive-menu-inner img {
+		width: 150px;
+	}
+}
+
+@media (max-width: 639px) {
+	h2 {
+		font-size: 28px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	.eaa-button {
+		font-size: 15px;
+	}
+	.logo {
+		max-width: 150px;
+	}
+	.logo + .eaa-button {
+		display: none;
+	}
+	#coffeerm-button {
+		top: 2px;
+	}
+	.landing-banner h1 {
+		font-size: 38px;
+	}
+	.landing-banner p {
+		font-size: 16px;
+	}
+	.leadership .leadership-content,
+	.leadership-content .flex > div {
+		width: 100%;
+	}
+	.leadership .leadership-image {
+		width: 100%;
+		order: 3;
+		margin-top: 30px;
+	}
+	.campus-facilities .max-width {
+		padding: 30px;
+	}
+	.facilities-list .list-item img {
+		margin-right: 14px;
+	}
+	.facilities-list .list-item p {
+		font-size: 15px;
+		width: calc(100% - 45px);
+		max-width: unset;
+		margin: 8px 0;
+	}
+	#faq .grid {
+		grid-template-columns: repeat(auto-fill, 100%);
+	}
+	#faq .faq {
+		padding: 30px;
+		--cut: 40px;
+		clip-path: polygon( 0 0, 100% 0, 100% calc(92% - var(--cut)), calc(101% - var(--cut)) 100%, 0 100% );
+	}
+	#faq h2 {
+		font-size: 70px;
+		margin-bottom: 0;
+	}
+	.legal {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#legal-menu {
+		justify-content: center;
+	}
+	.coffee {
+		width: 100%;
+		justify-content: center;
+	}
+	.graduate-capabilities {
+		--cut: 0;
+	}
+	.capabilities-list .list-item p {
+		font-size: 17px;
+	}
+	.application-form {
+		padding: 50px 35px 40px;
+	}
+	.course-tab-titles {
+		margin-left: 0;
+		margin-bottom: -10px;
+	}
+	.course-tabs a.course-tab {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 8px;
+		margin-right: 0;
+	}
+	.course-tabs a.course-tab::before,
+	.course-tabs a.course-tab::after {
+		display: none;
+	}
+}

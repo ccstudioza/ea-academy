@@ -14,9 +14,9 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info max-width flex flex-wrap space-between fade-in-up">
 			<div class="col-40">
-				<h2><?php echo get_field('footer_heading'); ?></h2>
+				<h2><?php echo get_field('footer_heading', 11); ?></h2>
 				<h4>Contact Us</h4>
-				<?php echo get_field('footer_contact_details'); ?>
+				<?php echo get_field('footer_contact_details', 11); ?>
 			</div>
 			<div class="col-40">
 				<h4>Stay Up To Date</h4>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 		<div class="bottom-footer">
-			<div class="max-width flex space-between align-center">
+			<div class="max-width flex flex-wrap space-between align-center">
 				<div class="legal">
 					<?php
 					wp_nav_menu(
@@ -37,7 +37,7 @@
 						)
 					); ?>
 				</div>
-				<div class="coffee flexp">
+				<div class="coffee flex">
 					<a href="https://www.coffeecreativestudio.com/" target="_blank" rel="nofollow">2025 Brew by Coffee Creative</a>
 					<img src="/wp-content/uploads/2025/09/coffee.svg">
 				</div>

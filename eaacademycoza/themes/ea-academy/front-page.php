@@ -15,33 +15,37 @@
 get_header();
 ?>
 
-<div class="landing-banner" style="background-image: url('<?php echo get_field('landing_background_image'); ?>');">
-	<div class="max-width flex flex-wrap space-between">
-		<div class="landing-content col-50">
-			<h1 class="fade-in-up"><?php echo get_field('landing_heading'); ?></h1>
-			<div class="fade-in-up delay-0.2"><?php echo get_field('landing_content'); ?></div>
-			<?php
-			if (get_field('landing_buttons')) { ?>
-                <div class="buttons fade-in-up delay-0.4">
-                    <?php
-                    $i = 1;
-                    while (have_rows('landing_buttons')) {
-                        the_row();
-                        $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
-                        $button = get_sub_field('button');
-                        if (isset($button['url'], $button['title'])) { ?>
-                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
-                                <?php echo esc_html($button['title']); ?>
-                            </a>
-                        <?php }
-                        $i++;
-                    } ?>
-                </div>
-            <?php } ?>
+<div class="landing-wrap">
+	<div class="landing-banner" style="background-image: url('<?php echo get_field('landing_background_image'); ?>');">
+		<div class="max-width flex flex-wrap space-between">
+			<div class="landing-content col-50">
+				<h1 class="fade-in-up"><?php echo get_field('landing_heading'); ?></h1>
+				<div class="fade-in-up delay-0.2"><?php echo get_field('landing_content'); ?></div>
+				<?php
+				if (get_field('landing_buttons')) { ?>
+	                <div class="buttons fade-in-up delay-0.4">
+	                    <?php
+	                    $i = 1;
+	                    while (have_rows('landing_buttons')) {
+	                        the_row();
+	                        $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
+	                        $button = get_sub_field('button');
+	                        if (isset($button['url'], $button['title'])) { ?>
+	                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+	                                <?php echo esc_html($button['title']); ?>
+	                            </a>
+	                        <?php }
+	                        $i++;
+	                    } ?>
+	                </div>
+	            <?php } ?>
+			</div>
 		</div>
+	</div>
+	<div class="max-width">
 		<div id="apply" class="application-form col-50 fade-in-up delay-0.6">
 			<h3>Apply Now</h3>
-			<?php echo do_shortcode('[gravityform id="1" title="false" description="true" ajax="true"]'); ?>
+			<?php echo do_shortcode('[gravityform id="1" title="false" description="true" ajax="true" tabindex="10"]'); ?>
 		</div>
 	</div>
 </div>
@@ -49,7 +53,7 @@ get_header();
 <div id="course">
 	<div class="max-width flex flex-wrap space-between">
 		<div class="course-tabs">
-			<div class="course-tab-titles flex fade-in-up">
+			<div class="course-tab-titles flex flex-wrap fade-in-up">
 				<a class="course-tab" href="#overview" data-tab-index="0">Overview</a>
 				<a class="course-tab" href="#about-course" data-tab-index="1">About The Course</a>
 				<a class="course-tab" href="#requirements" data-tab-index="2">Requirements</a>
