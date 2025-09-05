@@ -23,7 +23,7 @@
 				<?php echo do_shortcode('[gravityform id="2" title="false" description="true" ajax="true"]'); ?>
 			</div>
 			<div class="col-20">
-				<img src="/wp-content/uploads/2025/09/logo-icon.svg">
+				<img src="/wp-content/uploads/2025/09/Elevated-Artisan-Academy-logo.svg">
 			</div>
 		</div>
 		<div class="bottom-footer">

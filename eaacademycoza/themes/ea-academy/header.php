@@ -27,7 +27,7 @@
 		<nav id="site-navigation" class="main-navigation max-width flex flex-wrap align-center">
 			<div class="logo">
 				<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-					<img src="/wp-content/uploads/2025/09/logo.svg">
+					<img src="/wp-content/uploads/2025/09/EAA-logo.svg">
 				</a>
 			</div>
 			<a class="eaa-button bright-blue" href="#apply">Apply Now</a>
