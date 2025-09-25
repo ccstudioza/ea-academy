@@ -382,12 +382,12 @@ get_header();
 		<div class="leadership-content col-80">
 			<h2 class="fade-in-up delay-0.2"><?php echo get_field('leadership_heading'); ?></h2>
 			<div class="flex flex-wrap space-between">
-				<div class="col-40 fade-in-up delay-0.4">
+				<div class="col-60 fade-in-up delay-0.4">
 					<?php echo get_field('leadership_content_col_1'); ?>
-					<a class="eaa-button bright-blue" href="<?php echo get_field('leadership_button')['url']; ?>"><?php echo get_field('leadership_button')['title']; ?></a>
 				</div>
-				<div class="col-60 fade-in-up delay-0.6">
+				<div class="col-40 fade-in-up delay-0.6">
 					<?php echo get_field('leadership_content_col_2'); ?>
+					<a class="eaa-button bright-blue" href="<?php echo get_field('leadership_button')['url']; ?>"><?php echo get_field('leadership_button')['title']; ?></a>
 				</div>
 			</div>
 		</div>
@@ -461,6 +461,32 @@ get_header();
                 </div>
             <?php } ?>
 		</div>
+	</div>
+</div>
+
+<div id="testimonials">
+	<h2 class="fade-in-up">Testimonials</h2>
+	<div class="testimonial-carousel">
+		<?php 
+			while (have_rows('testimonials')) {
+				the_row();
+				$quote 		= get_sub_field('quote');
+				$text 		= get_sub_field('full_text');
+				$name 		= get_sub_field('name');
+				$position	= get_sub_field('position');
+
+				echo '
+					<div class="testimonial-single">
+						<span class="quote-icon">“</span>
+						<p class="testimonial-quote">'.$quote.'</p>
+						<p class="testimonial-text">'.$text.'</p>
+						<p class="testimonial-name">
+							<strong>'.$name.'</strong>'.$position.'
+						</p>
+					</div>
+				';
+			}
+		?>
 	</div>
 </div>
 

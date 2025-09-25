@@ -2,10 +2,10 @@ jQuery(document).ready(function($) {
 	$(function () {
 		$('.accordion-content').hide().css('display', 'none');
 		$('.accordion-header').removeClass('active');
-		$('.accordion-item:first-child').each(function () {
-			$(this).children('.accordion-header').addClass('active');
-			$(this).children('.accordion-content').css('display', 'flex').show();
-		});
+		// $('.accordion-item:first-child').each(function () {
+		// 	$(this).children('.accordion-header').addClass('active');
+		// 	$(this).children('.accordion-content').css('display', 'flex').show();
+		// });
 	});
 
 	$(document).on('click', '.accordion-header', function () {
@@ -42,6 +42,25 @@ jQuery(document).ready(function($) {
 	      	},
 	      	{
 	        	breakpoint: 641,
+	        	settings: {
+	          		slidesToShow: 1
+	        	}
+	      	}
+	    ]
+	});
+
+	$('.testimonial-carousel').slick({
+	    slidesToShow: 3,
+	    slidesToScroll: 1,
+	    centerMode: true,
+	    arrows: true,
+	    infinite: true,
+	    speed: 250,
+	    prevArrow: '<img class="slick-prev" src="/wp-content/uploads/2025/09/arrow.svg">',
+	    nextArrow: '<img class="slick-next" src="/wp-content/uploads/2025/09/arrow.svg">',
+	    responsive: [
+	      	{
+	        	breakpoint: 821,
 	        	settings: {
 	          		slidesToShow: 1
 	        	}

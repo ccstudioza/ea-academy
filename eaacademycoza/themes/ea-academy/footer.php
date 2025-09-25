@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info max-width flex flex-wrap space-between fade-in-up">
+		<div id="contact" class="site-info max-width flex flex-wrap space-between fade-in-up">
 			<div class="col-40">
 				<h2><?php echo get_field('footer_heading', 11); ?></h2>
 				<h4>Contact Us</h4>
@@ -23,7 +23,7 @@
 				<?php echo do_shortcode('[gravityform id="2" title="false" description="true" ajax="true"]'); ?>
 			</div>
 			<div class="col-20">
-				<img src="/wp-content/uploads/2025/09/Elevated-Artisan-Academy-logo.svg">
+				<img src="/wp-content/uploads/2025/09/nav-logo.svg">
 			</div>
 		</div>
 		<div class="bottom-footer">
