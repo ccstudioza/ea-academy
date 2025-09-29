@@ -30,8 +30,10 @@ get_header();
 	                        the_row();
 	                        $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
 	                        $button = get_sub_field('button');
-	                        if (isset($button['url'], $button['title'])) { ?>
-	                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+	                        if (isset($button['url'], $button['title'])) { 
+								$target = $button['target'] ? '_blank' : '_self';
+								?>
+	                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
 	                                <?php echo esc_html($button['title']); ?>
 	                            </a>
 	                        <?php }
@@ -77,8 +79,9 @@ get_header();
 				                        the_row();
 				                        $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
 				                        $button = get_sub_field('button');
-				                        if (isset($button['url'], $button['title'])) { ?>
-				                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+				                        if (isset($button['url'], $button['title'])) {
+										$target = $button['target'] ? '_blank' : '_self'; ?>
+				                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
 				                                <?php echo esc_html($button['title']); ?>
 				                            </a>
 				                        <?php }
@@ -103,8 +106,9 @@ get_header();
 				                        the_row();
 				                        $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
 				                        $button = get_sub_field('button');
-				                        if (isset($button['url'], $button['title'])) { ?>
-				                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+				                        if (isset($button['url'], $button['title'])) { 
+										$target = $button['target'] ? '_blank' : '_self';?>
+				                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
 				                                <?php echo esc_html($button['title']); ?>
 				                            </a>
 				                        <?php }
@@ -133,8 +137,9 @@ get_header();
 				                        the_row();
 				                        $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
 				                        $button = get_sub_field('button');
-				                        if (isset($button['url'], $button['title'])) { ?>
-				                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+				                        if (isset($button['url'], $button['title'])) { 
+										$target = $button['target'] ? '_blank' : '_self';?>
+				                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
 				                                <?php echo esc_html($button['title']); ?>
 				                            </a>
 				                        <?php }
@@ -208,8 +213,9 @@ get_header();
 	                    the_row();
 	                    $class = ($i === 1) ? 'bright-blue' : 'white-o';
 	                    $button = get_sub_field('button');
-	                    if (isset($button['url'], $button['title'])) { ?>
-	                        <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+	                    if (isset($button['url'], $button['title'])) { 
+								$target = $button['target'] ? '_blank' : '_self'; ?>
+	                        <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
 	                            <?php echo esc_html($button['title']); ?>
 	                        </a>
 	                    <?php }
@@ -253,8 +259,9 @@ get_header();
                         the_row();
                         $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
                         $button = get_sub_field('button');
-                        if (isset($button['url'], $button['title'])) { ?>
-                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+                        if (isset($button['url'], $button['title'])) { 
+								$target = $button['target'] ? '_blank' : '_self';?>
+                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
                                 <?php echo esc_html($button['title']); ?>
                             </a>
                         <?php }
@@ -317,8 +324,9 @@ get_header();
                         the_row();
                         $class = ($i === 1) ? 'bright-blue' : 'white';
                         $button = get_sub_field('button');
-                        if (isset($button['url'], $button['title'])) { ?>
-                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+                        if (isset($button['url'], $button['title'])) { 
+								$target = $button['target'] ? '_blank' : '_self';?>
+                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
                                 <?php echo esc_html($button['title']); ?>
                             </a>
                         <?php }
@@ -344,8 +352,9 @@ get_header();
                         the_row();
                         $class = ($i === 1) ? 'bright-blue' : 'dark-blue';
                         $button = get_sub_field('button');
-                        if (isset($button['url'], $button['title'])) { ?>
-                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+                        if (isset($button['url'], $button['title'])) { 
+								$target = $button['target'] ? '_blank' : '_self';?>
+                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
                                 <?php echo esc_html($button['title']); ?>
                             </a>
                         <?php }
@@ -422,8 +431,9 @@ get_header();
 	                    the_row();
 	                    $class = ($i === 1) ? 'bright-blue' : 'white';
 	                    $button = get_sub_field('button');
-	                    if (isset($button['url'], $button['title'])) { ?>
-	                        <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+	                    if (isset($button['url'], $button['title'])) { 
+								$target = $button['target'] ? '_blank' : '_self';?>
+	                        <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
 	                            <?php echo esc_html($button['title']); ?>
 	                        </a>
 	                    <?php }
@@ -451,8 +461,9 @@ get_header();
                         the_row();
                         $class = ($i === 1) ? 'bright-blue' : 'white';
                         $button = get_sub_field('button');
-                        if (isset($button['url'], $button['title'])) { ?>
-                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>">
+                        if (isset($button['url'], $button['title'])) { 
+								$target = $button['target'] ? '_blank' : '_self';?>
+                            <a class="eaa-button <?php echo esc_attr($class); ?>" href="<?php echo esc_url($button['url']); ?>" target="<?php echo $target; ?>">
                                 <?php echo esc_html($button['title']); ?>
                             </a>
                         <?php }
